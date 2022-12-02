@@ -1,0 +1,29 @@
+//getter, setter
+void main() {
+ final book=Book("flutter",price:1500,author:"ram");
+  print('name:${book.getName}');
+  book.setName="dart";
+   print('name:${book.getName}');
+}
+
+class Book{
+  String name;
+  String? author;
+  int price;
+  Book(this.name,{this.author,required this.price});
+  String get getName{
+    return this.name;
+  }
+  set setName(String name){
+    this.name=name;
+  }
+  String? get getAuthor=>this.author;//using lambda function
+  set setAuthor(String author )=>this.author=author;
+  
+  int get getPrice{
+    return this.price;
+  }
+  set setPrice(int price){
+    this.price=price;
+  }
+}
